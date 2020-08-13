@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
 
+{% extends 'portfolio/base.html' %}
 {% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-</head>
+{% block content %}
 
-<body>
     <h1>This is my portfolio home page</h1>
+
+    <a href="{% url 'blog:all_blogs' %}">Blogs</a>
 
     <a href="{% static 'portfolio/other/chandrakant_salutagi_resume.pdf' %}">Resume</a>
 
     <img src="{% static 'portfolio/images/chandu.jpg' %}" alt="profile picture">
+
 
     {% for project in projects %}
         <h2>{{ project.title }}</h2>
@@ -24,6 +21,5 @@
             <a href="{{ project..url }}">image url</a>
         {% endif %}
     {% endfor %}
-</body>
 
-</html>
+{% endblock content %}
