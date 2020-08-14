@@ -11,8 +11,15 @@
 </div>
 
 <div class="profile_pic mb-4 mt-1">
-    <img class="rounded mx-auto d-block" src="{% static 'portfolio/images/chandu_bw.jpg' %}" alt="profile picture"
+    <img class="rounded mx-auto d-block" src="{% static 'portfolio/images/chandu.jpg' %}" alt="profile picture"
         width="350">
+</div>
+
+<div class="intro text-center">
+    <p class="display-4 role"><u>Software Developer</u></p>
+    <small class="h4 font-weight-normal">Tech Enthusiast, Vivid Learner, Problem Solver</small>
+    <p>Experience in Web Devlopement, Automation and Analysis Scripts</p>
+    <p class="h4 font-weight-normal">Python, Django, Git, Linux, JIRA, HTML, CSS, Javascript</p>
 </div>
 
 <hr class="mt-2 mb-3" />
@@ -20,28 +27,23 @@
 <div class="projects m-4">
     <h2 class="display-4 text-center">Projects</h2>
 
-    {% for project in projects %}
-    <div class="project m-3">
-        <!-- <h2>{{ project.title }}</h2>
-        <p>{{ project.description }}</p>
-        <img src="{{ project.image.url }}" alt="project image" width="120" height="75">
-        {% if project.url %}
-        <a href="{{ project.url }}">image url</a>
-        {% endif %} -->
+    <div class="container">
+        {% for project in projects %}
+        <div class="project m-3">
+            <div class="card border-dark h-100">
+                <img class="card-img-top" src="{{ project.image.url }}" alt="project image" width="300" height="200">
 
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="{{ project.image.url }}" alt="project image">
-
-            <div class="card-body">
-                <h5 class="card-title">{{ project.title }}</h5>
-                <p class="card-text">{{ project.description }}</p>
-                {% if project.url %}
-                <a href="{{ project.url }}" class="btn btn-primary">Source Code</a>
-                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p class="card-text">{{ project.description }}</p>
+                    {% if project.url %}
+                    <a href="{{ project.url }}" class="btn btn-primary">Source Code</a>
+                    {% endif %}
+                </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 
 </div>
 {% endblock content %}

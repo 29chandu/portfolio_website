@@ -1,3 +1,40 @@
 .hero h1 {
     text-align: center;
 }
+
+
+.nav-links a {
+    font-size: 1.2em;
+}
+
+.projects .project {
+    width: 33%;
+    height: 400px;
+}
+
+.intro .role u {
+    text-decoration: none;
+    border-bottom: 1px solid black;
+
+}
+
+.container {
+    display: flex;
+    height: 350px;
+}
+
+img:hover {
+    transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(0%);
+    /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(0%);
+    /* FF 35+ */
+}
+
+img {
+    transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(100%);
+    /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(100%);
+    /* FF 35+ */
+}
