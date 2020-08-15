@@ -8,8 +8,11 @@
 }
 
 .projects .project {
-    width: 33%;
+    /* max-width: 370px;
+    min-width: 350px; */
     height: 400px;
+    flex-basis: 370px;
+    background-color: violet;
 }
 
 .intro .role u {
@@ -20,7 +23,8 @@
 
 .container {
     display: flex;
-    height: 350px;
+    /* height: 450px; */
+    flex-wrap: wrap;
 }
 
 img:hover {
@@ -37,4 +41,9 @@ img {
     /* Ch 23+, Saf 6.0+, BB 10.0+ */
     filter: grayscale(100%);
     /* FF 35+ */
+}
+
+.projects {
+    /* background-color: khaki; */
+    /* height: fit-content; */
 }
